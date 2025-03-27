@@ -35,22 +35,21 @@
   flex: 1;
   margin-left: 70px;
   margin-right: 35px;
-  max-width: 600px;
+  max-width: 500px;
   display: flex;
   align-items: center;
 }
 
-/* Updated YouTube-style search bar */
 .search-bar {
   flex: 1;
-  height: 40px;
-  padding-left: 15px;
+  height: 36px;
+  padding-left: 10px;
   font-size: 16px;
-  border: 1px solid rgb(192, 192, 192);
-  border-right: none; /* Removes right border */
-  border-radius: 20px 0 0 20px; /* Rounded left corners */
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgb(192, 192, 192);
+  border-radius: 2px;
   box-shadow: inset 1px 2px 3px rgba(0, 0, 0, 0.05);
-  outline: none;
 }
 
 .search-bar::placeholder {
@@ -58,29 +57,19 @@
   font-size: 16px;
 }
 
-/* Search Button */
 .search-button {
   height: 40px;
-  width: 60px;
+  width: 66px;
   background-color: rgb(240, 240, 240);
-  border: 1px solid rgb(192, 192, 192);
-  border-left: none; /* Removes left border */
-  border-radius: 0 20px 20px 0; /* Rounded right corners */
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgb(192, 192, 192);
+  margin-left: -1px;
+  margin-right: 10px;
   cursor: pointer;
-  transition: background 0.2s;
 }
 
-.search-button:hover {
-  background-color: rgb(230, 230, 230);
-}
-
-.search-icon {
-  height: 24px;
-}
-
+.search-button,
 .voice-search-button,
 .upload-icon-container,
 .youtube-apps-icon-container,
@@ -124,12 +113,10 @@
 .voice-search-button {
   height: 40px;
   width: 40px;
-  border-radius: 50%;
+  border-radius: 20px;
   border: none;
   background-color: rgb(245, 245, 245);
   cursor: pointer;
-  margin-left: 8px;
-  transition: background 0.2s;
 }
 
 .voice-search-icon {
