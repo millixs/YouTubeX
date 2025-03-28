@@ -39,22 +39,25 @@
   justify-content: center;
 }
 
+/* Search Bar Container (Restoring Border & Fixing Layout) */
 .search-bar-container {
   display: flex;
   align-items: center;
   width: 100%;
   max-width: 600px;
-  height: 40px; /* Ensures correct height */
-  border: 1px solid #ccc; /* Fixes missing border */
-  border-radius: 25px;
-  overflow: hidden;
+  height: 40px;
+  border: 1px solid #ccc !important; /* FORCE border to appear */
+  border-radius: 40px;
   background-color: white;
+  overflow: hidden;
+  position: relative; /* Ensure child elements stay aligned */
 }
 
+/* Input Field */
 .search-bar {
   flex: 1;
   height: 100%;
-  padding: 0 12px;
+  padding: 0 14px;
   font-size: 16px;
   font-family: Roboto, Arial, sans-serif;
   border: none;
@@ -69,25 +72,20 @@
 
 /* Focus Effect */
 .search-bar-container:focus-within {
-  border: 1px solid #1A73E8;
+  border: 1px solid #1A73E8 !important;
   box-shadow: 0 0 4px rgba(26, 115, 232, 0.5);
 }
 
-/* Search Button (inside search bar container) */
+/* Search Button (Inside Input) */
 .search-button {
   height: 40px;
   width: 50px;
-  background-color: #F8F8F8;
-  border: none;
+  background-color: white;
+  border-left: 1px solid #ddd; /* Divider like YouTube */
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  border-left: 1px solid #ddd; /* Matches YouTube */
-}
-
-.search-button img {
-  height: 20px; /* Correct YouTube icon size */
 }
 
 /* Voice Search Button */
@@ -102,11 +100,7 @@
   cursor: pointer;
   border: none;
   margin-left: 10px;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2); /* Adds slight depth */
-}
-
-.voice-search-icon {
-  height: 24px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2);
 }
 
 /* Hover Effects */
@@ -114,6 +108,7 @@
 .voice-search-button:hover {
   background-color: #EDEDED;
 }
+
 
 
 /* Tooltip styling for all icons */
