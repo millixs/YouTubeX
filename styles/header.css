@@ -30,7 +30,6 @@
   height: 20px;
   cursor: pointer;
 }
-
 .middle-section {
   flex: 1;
   margin-left: 70px;
@@ -42,14 +41,23 @@
 
 .search-bar {
   flex: 1;
-  height: 36px;
+  height: 35.2px;
   padding-left: 10px;
   font-size: 16px;
   border-width: 1px;
   border-style: solid;
-  border-color: rgb(192, 192, 192);
-  border-radius: 2px;
-  box-shadow: inset 1px 2px 3px rgba(0, 0, 0, 0.05);
+  border-color: #ccc;
+  border-radius: 4px;
+  box-shadow: inset 0 0 3px 2px rgba(26, 115, 232, 0.05);
+  outline: none;
+  transition: box-shadow 0.2s ease-in-out, border-color 0.2s ease-in-out;
+}
+
+/* YouTube-style blue focus effect */
+.search-bar:focus {
+  border-color: #1A73E8;
+  box-shadow: 0 0 3px 2px rgba(26, 115, 232, 0.5);
+  outline: none;
 }
 
 .search-bar::placeholder {
